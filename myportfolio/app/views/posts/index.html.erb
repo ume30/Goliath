@@ -1,0 +1,70 @@
+<html>
+
+ <head>
+
+ </head>
+ <body class="nochange">
+  <header class="header1">
+   <section class="header2">
+    <p class="home-icon1">
+      <%= link_to("/nav") do %>
+       <span class="bars"><i class="fa fa-bars"></i></span>
+      <% end %>
+     <span class="name">
+      <% @current_group = Group.find_by(id: session[:group_id]) %>
+      <% if @current_group %>
+          <span><%= link_to(@current_group.name, "/groups/#{@current_group.id}") %></span>
+          <%= link_to("/groups/#{@current_group.id}") do %>
+          <span class="cog"><i class="fas fa-users-cog"></i></span>
+          <% end %>
+      <% else %>
+          <span>ホーム</span>
+      <% end %>
+     </span>
+
+    </p>
+   </section>
+   <section class="header3">
+       <% @current_user = User.find_by(id: session[:user_id]) %>
+        <% if @current_user %>
+          <p><%= link_to(@current_user.name, "/users/#{@current_user.id}") %></p>
+        <% else %>
+          <p></p>
+        <% end %>
+   </section>
+
+  </header>
+  <div class="wrap">
+  <main class="main1">
+    <div class="main posts-index">
+     <div class="container">
+       <% @current_user.posts.each do |post| %>
+         <div class="posts-index-item">
+           <div class="post-group-name">
+           </div>
+           <div class="post-user-name">
+             <%= link_to(post.user.name, "/users/#{post.user.id}") %>
+           </div>
+
+           <%= link_to(post.content,"/posts/#{post.id}") %>
+         </div>
+       <% end %>
+      </div>
+    </div>
+    <p><%= link_to("/posts/record") do %>
+    <span class="pencil"><i class="fa fa-pencil-square"></i></span>
+    <% end %></p>
+  </main>
+  </div>
+
+  <footer class="footer1">
+    <p class="home-icon2"><span class="users"><i class="fa fa-users"></i></span>
+    <%= link_to("/information") do %>
+       <span class="bell"><i class="fa fa-bell-o"></i></span>
+    <% end %>
+    <%= link_to("/users/#{@current_user.id}") do %>
+    <span class="user"><i class="fa fa-user"></i></span></p>
+    <% end %>
+  </footer>
+ </body>
+</html>

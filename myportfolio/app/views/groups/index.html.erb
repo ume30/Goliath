@@ -1,0 +1,15 @@
+<div class="main groups-index">
+  <div class="container">
+    <h1 class="groups-heading">グループ一覧</h1>
+    <% @groups.each do |group| %>
+      <div class="groups-index-item">
+        <div class="group-left">
+         <img src="<%= "/group_images/#{group.image_name}" %>">
+        </div>
+        <div class="group-right">
+          <%= link_to(group.name, "/groups/#{group.id}") %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

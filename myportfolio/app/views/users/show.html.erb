@@ -1,0 +1,48 @@
+<body class="nochange">
+  <header class="header5">
+   <section class="header2">
+    <p class="home-icon1">
+    <span class="name">ユーザー情報</span></p>
+   </section>
+   <section class="header9">
+     <div class="usershow">
+      <img src="<%= "/user_images/#{@user.image_name}" %>">
+      <p><%= @user.name %></p>
+       <p><%= @user.email %></p>
+       <% current_user = User.find_by(id: session[:user_id]) %>
+        <% if current_user %>
+          <div>【ログイン中のユーザー】<br><%= link_to(current_user.name, "/users/#{current_user.id}") %></div>
+        <% else %>
+          <p></p>
+        <% end %>
+        <% if @current_group %>
+          <div>【参加中のグループ】<br><%= link_to(@current_group.name, "/groups/#{@current_group.id}") %></div>
+        <% else %>
+          <p></p>
+        <% end %>
+        <% if @user.id == @current_user.id %>
+       <%= link_to("/users/#{@user.id}/edit") do %>
+        <input class="profile-edit-button1" type="submit" value="プロフィールを編集する">
+        <% end %>
+        <%= link_to("■", "/users/#{@user.id}/edit") %>
+        <% end %>
+      </div>
+    </section>
+  </header>
+
+  <main class="main7">
+
+  </main>
+
+  <footer class="footer1">
+    <p class="home-icon2">
+    <%= link_to("/posts/index") do %>
+    <span class="users2"><i class="fa fa-users"></i></span>
+    <% end %>
+    <%= link_to("/information") do %>
+    <span class="bell"><i class="fa fa-bell-o"></i></span>
+    <% end %><%= link_to("/users/#{@current_user.id}") do %>
+    <span class="user2"><i class="fa fa-user"></i></span></p>
+    <% end %>
+  </footer>
+</body>

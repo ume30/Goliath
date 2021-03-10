@@ -1,0 +1,23 @@
+<body>
+  <header class="group-exchange">
+    <p>グループ一覧</p>
+  </header>
+
+  <div class="wrap">
+  <main class="main-group">
+    <div class="container">
+       <% @groups.each do |group| %>
+         <div class="posts-index-item">
+          <%= link_to(group.name, "/groups/#{group.id}") %>
+         </div>
+       <% end %>
+     </div>
+  </main>
+  </div>
+
+  <footer class="footer-color">
+    <p class="plus-circle"><i class="fas fa-plus-circle"></i><span><a href="/groupup" data-confirm="※所属できるグループは５つまでです。新しく作成しますか？">新しくグループを作成する</a>
+    </span></p>
+  </footer>
+
+</body>

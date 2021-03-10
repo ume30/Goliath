@@ -1,0 +1,99 @@
+// Place all the styles related to the groups controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+@charset "UTF-8";
+
+/*--------------------------------
+全体
+---------------------------------*/
+
+/*--------------------------------
+show
+---------------------------------*/
+.main8 {
+  background-image: url("/images/man-588.jpg");
+  width: 100%;
+  height: 800px;
+}
+
+/*--------------------------------
+change_group
+---------------------------------*/
+
+.header-color {
+  position: sticky;
+  top: 0;
+  color:white;
+  a:visited { color:white; text-decoration:none }
+  background-color: #00FFFF;
+  padding: 10px;
+}
+
+.main-group0 {
+  background-image: url("/images/man-5.jpg");
+  a:visited { color: #00FFFF; text-decoration:none }
+}
+
+
+
+/*--------------------------------
+join_group
+---------------------------------*/
+
+.group-exchange {
+  position: sticky;
+  top: 0;
+  color: #00FFFF;
+  background-image: url("/images/fractal-25.jpg");
+  padding: 25px;
+  overflow:hidden;
+}
+
+.main-group {
+  background-image: url("/images/athletics-32.jpg");
+  a:visited { color: #00FFFF; text-decoration:none }
+}
+
+.footer-color {
+  position: sticky;
+  bottom: 0;
+  color:white;
+  a:visited { color:white; text-decoration:none }
+  background-color: #00FFFF;
+  padding: 10px;
+}
+
+/*--------------------------------
+new
+---------------------------------*/
+
+.header6 {
+  background-color: black;
+  width: 100%;
+  height: 200%;
+  margin: 0px 0px;
+  padding: 13px 0px;
+}
+
+.group-name {
+  color: #00FFFF;
+}
+
+.group-form {
+  background-color: rgb(224, 218, 218);
+  width: 400px;
+  height: 45px;
+}
+
+.group-code {
+  background-color: rgb(224, 218, 218);
+}
+
+.main6 {
+  background-image: url("/images/kettlebell.jpg");
+  width: 100%;
+  height: 800px;
+}
+
+

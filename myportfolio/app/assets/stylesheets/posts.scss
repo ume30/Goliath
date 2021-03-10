@@ -1,0 +1,212 @@
+// Place all the styles related to the post controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+/*--------------------------------
+index
+---------------------------------*/
+
+/*--------------------------------
+全体
+---------------------------------*/
+
+.nochange {
+  a:link { color: #00FFFF; text-decoration:none }
+  a:visited { color: #00FFFF; text-decoration:none }
+}
+
+
+/*--------------------------------
+ヘッダー
+---------------------------------*/
+.header1 {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: solid;
+  border-color: white;
+ }
+
+ .header2 {
+  width: 100%;
+  margin: 0px 0px;
+ }
+
+.home-icon1 {
+  color: #00FFFF;
+  background-color:black;
+  padding: 20px 20px;
+  font-size: 20px;
+  margin-bottom: 0px;
+ }
+
+ .bars {
+   margin-left: 20px;
+   color: #00FFFF;
+ }
+
+ .name {
+  margin-right: 400px;
+}
+
+ .cog {
+  position: absolute;
+  right: 5%;
+  color: #00FFFF;
+ }
+
+ .header3 {
+   background-color: #00FFFF;
+   width: 100%;
+   margin: 0px 0px;
+   padding: 13px 0px;
+   background-image: url("/images/fractal-25.jpg");
+ }
+
+
+ /*--------------------------------
+メイン
+---------------------------------*/
+.wrap {
+  overflow: hidden;
+}
+
+.main1 {
+  background-image: url("/images/man-46.jpg");
+  width: 100%;
+  height: 6000px;
+}
+
+.posts-index-item {
+  height: 60px;
+  width: 700%;
+  border-bottom: solid;
+  border-color: #dddddd;
+  margin-left: 70px;
+}
+
+.pencil {
+  color: #00FFFF;
+  font-size: 80px;
+  position: fixed;
+  left: 90%;
+  bottom: 15%;
+}
+
+
+ /*--------------------------------
+フッター
+---------------------------------*/
+.footer1 {
+  background-color: black;
+  position: sticky;
+  bottom: 0;
+  border-top: solid;
+  border-color: #dddddd;
+}
+
+.home-icon2 {
+  color: #bbbbbb;
+  padding: 20px 20px;
+  font-size: 20px;
+ }
+
+ .users {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  color: #00FFFF;
+}
+
+.bell {
+  position: absolute;
+  top: 40%;
+  left: 18%;
+  color: #bbbbbb;
+}
+
+.user {
+  position: absolute;
+  top: 40%;
+  left: 33%;
+  color: #bbbbbb;
+}
+
+
+/*--------------------------------
+record
+---------------------------------*/
+.close {
+  margin-left: 20px;
+  color: #00FFFF;
+}
+
+ .main3 {
+  width: 100%;
+  height: 613px;
+ }
+
+ .training-button {
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(224, 218, 218);
+  font-size: 20px;
+  padding: 10px 50px;
+  margin: 50px 50px;
+}
+
+/*--------------------------------
+new
+---------------------------------*/
+
+.arrow-left {
+  margin-left: 20px;
+  color: #00FFFF;
+}
+
+.muscle-button {
+  border-radius: 30px;
+  color: #ffffff;
+  border: none;
+  background-color: #00FFFF;
+  font-size: 20px;
+  padding: 10px 65px;
+  margin: 50px 180px;
+}
+
+textarea {
+  background-color: rgb(224, 218, 218);
+  resize: none;
+  width:500px;
+  height:80px;
+  border-radius: 5px;
+  border: none;
+}
+
+/*--------------------------------
+show
+---------------------------------*/
+
+.main4 {
+  height: 548px;
+  background-image: url("/images/man-1871.jpg");
+}
+
+.posts-show-item {
+  color: #00FFFF;
+  height: 150px;
+  width: 700%;
+  border-bottom: solid;
+  border-color: #dddddd;
+  margin-left: 70px;
+}
+
+.edit-button {
+  margin-left: 40px;
+}
+
+.destroy-button {
+  margin-left: 20px;
+  color: #00FFFF;
+}

@@ -1,0 +1,21 @@
+
+<body>
+  <header class="header4">
+    <p>通知</p>
+  </header>
+
+  <main class="main2">
+     <p>ゴリアテをご登録いただき、どうもありがとうございます！<br>これからもより便利にご使用いただけるようにサービスをアップデートしていきます!【2021-2-17】</p>
+
+  </main>
+
+  <footer class="footer1">
+    <p class="home-icon2">
+    <%= link_to("/posts/index") do %>
+    <span class="users2"><i class="fa fa-users"></i></span>
+    <% end %><span class="bell2"><i class="fa fa-bell-o"></i></span>
+    <%= link_to("/users/#{@current_user.id}") do %>
+    <span class="user"><i class="fa fa-user"></i></span></p>
+    <% end %>
+  </footer>
+</body>

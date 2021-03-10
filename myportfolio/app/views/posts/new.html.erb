@@ -1,0 +1,65 @@
+<html>
+
+ <head>
+ </head>
+ <body>
+  <header class="header1">
+   <section class="header2">
+    <p class="home-icon1"><%= link_to("/posts/record") do %>
+    <span class="arrow-left"><i class="fa fa-arrow-left"></i></span>
+    <% end %>
+    <span class="name">記録を追加する</span>
+    </p>
+
+   </section>
+  </header>
+
+  <main class=main3>
+    <section>
+      <div class="training">
+        <p><input class="muscle-button" type="submit" value="筋トレ"></p>
+      </div>
+    </section>
+
+    <section>
+      <p>本日のトレーニング</p>
+    </section>
+
+    <section class="main posts-new">
+      <div class="container">
+
+        <div class="form">
+         <div class="form-body">
+            <% @post.errors.full_messages.each do |message| %>
+             <div class="form-error">
+               <%= message %>
+             </div>
+            <% end %>
+             <%= form_tag("/posts/create") do %>
+              <div> 種目・セット数・メモ  <br><textarea name="content"  placeholder=" 例)  ベンチプレス    ◯セット目    ◯回    ◯kg
+
+    今日のトレーニングはどうでしたか？"><%= @post.content%></textarea>
+               <input type="submit" value="追加する">
+              </div>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer1">
+    <p class="home-icon2">
+    <%= link_to("/posts/index") do %>
+    <span class="users2"><i class="fa fa-users"></i></span>
+    <% end %>
+    <%= link_to("/information") do %>
+       <span class="bell"><i class="fa fa-bell-o"></i></span>
+    <% end %>
+    <%= link_to("/users/#{@current_user.id}") do %>
+    <span class="user"><i class="fa fa-user"></i></span></p>
+    <% end %>
+  </footer>
+  </body>
+</html>

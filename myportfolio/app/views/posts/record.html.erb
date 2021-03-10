@@ -1,0 +1,47 @@
+<html>
+
+ <head>
+ </head>
+ <body>
+  <header class="header1">
+   <section class="header2">
+    <p class="home-icon1"><%= link_to("/posts/index") do %>
+    <span class="close"><i class="fa fa-close"></i></span>
+    <% end %>
+    <span class="name">記録をのこす</span>
+    </p>
+
+   </section>
+  </header>
+
+  <main class=main3>
+    <section>
+      <p>お疲れさまでした♪</p>
+    </section>
+
+    <section>
+      <p>本日のトレーニング</p>
+    </section>
+
+    <section>
+      <p><%= link_to("/posts/new") do %>
+      <input class="training-button" type="submit" value="➕トレーニングを追加する">
+      <% end %></p>
+    </section>
+
+  </main>
+
+  <footer class="footer1">
+    <p class="home-icon2">
+    <%= link_to("/posts/index") do %>
+    <span class="users2"><i class="fa fa-users"></i></span>
+    <% end %>
+    <%= link_to("/information") do %>
+       <span class="bell"><i class="fa fa-bell-o"></i></span>
+    <% end %>
+    <%= link_to("/users/#{@current_user.id}") do %>
+    <span class="user"><i class="fa fa-user"></i></span></p>
+    <% end %>
+  </footer>
+  </body>
+</html>

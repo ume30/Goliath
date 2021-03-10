@@ -1,0 +1,40 @@
+<%# #Home#top</h1 %>
+<%# Find me in app/views/home/top.html.erb %>
+
+<html>
+
+<body class="body">
+ <header class="header">
+ <img src="/assets/Goliath.png" alt="ロゴマーク">
+  <h2>Goliath</h2>
+ </header>
+
+ <main class="main">
+   <div class="top-message">
+     <h2>新時代アプリ「ゴリアテ」登場<br>仲間と日々の筋トレを共有<br>筋トレ法を語り合ったり、鍛えたカラダを披露したり<br>『楽しく続く筋トレ』<br><br>筋トレは自己実現の時代へ</h2>
+   </div>
+ </main>
+
+ <footer class="footer">
+   <div class="registration">
+    <div class="free-registration">
+       <p>
+       <%= link_to("about-registration") do %>
+       <input class="free-registration-button" type="submit" value="無料登録する">
+       <% end %>
+       </p>
+    </div>
+
+    <div class="login">
+       <p>もしアカウントをお持ちの場合は</p>
+       <p>
+       <%= link_to("about-login") do %>
+       <input class="login-button" type="submit" value="ログインする">
+       <% end %>
+       </p>
+    </div>
+   </div>
+ </footer>
+</body>
+</html>
+

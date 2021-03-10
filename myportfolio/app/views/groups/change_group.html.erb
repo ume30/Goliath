@@ -1,0 +1,32 @@
+<body>
+  <header class="header-color">
+    <p class="plus-circle"><i class="fas fa-plus-circle"></i><span><a href="/groupup" data-confirm="※所属できるグループは５つまでです。新しく作成しますか？">新しくグループを作成する</a>
+    </span></p>
+  </header>
+
+  <div class="wrap">
+  <main class="main-group0">
+    <div class="container">
+       <% @groups.each do |group| %>
+         <div class="posts-index-item">
+          <%= link_to(group.name, "/groups/#{group.id}") %>
+         </div>
+       <% end %>
+     </div>
+  </main>
+  </div>
+
+  <footer class="footer1">
+    <p class="home-icon2">
+    <%= link_to("/posts/index") do %>
+    <span class="users2"><i class="fa fa-users"></i></span>
+    <% end %>
+    <%= link_to("/information") do %>
+    <span class="bell"><i class="fa fa-bell-o"></i></span>
+    <% end %>
+    <%= link_to("/users/#{@current_user.id}") do %>
+    <span class="user"><i class="fa fa-user"></i></span></p>
+    <% end %>
+  </footer>
+
+</body>

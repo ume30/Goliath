@@ -1,0 +1,65 @@
+<html>
+ <head>
+ </head>
+ <body class="nochange">
+  <header class="header1">
+   <section class="header2">
+    <p class="home-icon1"><%= link_to("/posts/index") do %>
+    <span class="arrow-left"><i class="fa fa-arrow-left"></i></span>
+    <% end %>
+    <span class="name">記録</span>
+    </p>
+   </section>
+   <section class="header3">
+    <% @current_user = User.find_by(id: session[:user_id]) %>
+        <% if @current_user %>
+          <p><%= link_to(@current_user.name, "/users/#{@current_user.id}") %></p>
+        <% else %>
+          <p></p>
+        <% end %>
+   </section>
+  </header>
+
+  <div class="wrap">
+  <main class="main4">
+    <div class="main posts-show">
+      <div class="container">
+        <div class="posts-show-item">
+
+          <%= link_to(@group.name, "/groups/#{@group.id}") %>
+          <%= link_to(@user.name, "/users/#{@user.id}") %>
+          <p><%= @post.content %></p>
+
+          <div class="post-menus">
+            <div class="post-time">
+             <%= time_ago_in_words(@post.created_at) %>前<span class="edit-button">
+             <% if @post.user_id == @current_user.id %>
+             <%= link_to("編集", "/posts/#{@post.id}/edit") %>
+             </span>
+             <span class="destroy-button"><%= link_to("削除", "/posts/#{@post.id}/destroy",{method: "post"}) %></span>
+            </div>
+            <% end %>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </main>
+
+
+  <footer class="footer1">
+    <p class="home-icon2">
+    <%= link_to("/posts/index") do %>
+    <span class="users2"><i class="fa fa-users"></i></span>
+    <% end %>
+    <%= link_to("/information") do %>
+       <span class="bell"><i class="fa fa-bell-o"></i></span>
+    <% end %>
+    <%= link_to("/users/#{@current_user.id}") do %>
+    <span class="user"><i class="fa fa-user"></i></span></p>
+    <% end %>
+  </footer>
+
+ </body>
+</html>
